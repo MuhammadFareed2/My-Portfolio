@@ -7,7 +7,6 @@ import Link from 'next/link';
 import { Button } from '@/components/button';
 import { Icons } from '@/components/icons';
 import { projectsData } from '@/lib/data';
-import { cn } from '@/lib/utils';
 
 type TProject = (typeof projectsData)[number];
 
