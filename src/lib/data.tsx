@@ -38,9 +38,8 @@ export const projectsData = [
       'Resend',
     ],
     links: {
-      preview: 'https://next-starter-skolaczk.vercel.app',
-      github: 'https://github.com/Skolaczk/next-starter',
-      githubApi: 'https://api.github.com/repos/Skolaczk/next-starter',
+      preview: 'https://muhammadfareed.vercel.app',
+      github: 'https://github.com/MuhammadFareed2/My-Portfolio',
     },
   },
   {
@@ -61,7 +60,6 @@ export const projectsData = [
     links: {
       preview: 'https://brief-ai-frontend.vercel.app/',
       github: 'https://github.com/MuhammadFareed2/Brief-AI',
-      githubApi: 'https://api.github.com/repos/MuhammadFareed2/Brief-AI',
     },
   },
 ] as const;
