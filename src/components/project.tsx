@@ -46,14 +46,14 @@ export const Project = ({ project, index }: TProps) => {
         href={links.preview}
         aria-label={title}
         target="_blank"
-        className="overflow-hidden rounded"
+        className="overflow-hidden rounded w-full"
       >
         <Image
           src={image}
           alt={title}
           height={390}
           width={600}
-          className="rounded transition-transform hover:scale-105"
+          className="rounded transition-transform hover:scale-105 w-full h-auto object-cover"
         />
       </Link>
 
@@ -71,7 +71,7 @@ export const Project = ({ project, index }: TProps) => {
       </div>
 
       {/* Links (Preview + GitHub buttons) */}
-      <div className="flex gap-2 mt-auto">
+      <div className="flex gap-2 mt-auto flex-wrap">
         {links.preview && (
           <Button asChild size="sm">
             <Link href={links.preview} target="_blank">
