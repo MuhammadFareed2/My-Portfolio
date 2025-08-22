@@ -37,11 +37,9 @@ export const Project = ({ project, index }: TProps) => {
       variants={fadeInAnimationVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{
-        once: true,
-      }}
+      viewport={{ once: true }}
       custom={index}
-      className="flex flex-col rounded border p-5 md:w-1/2"
+      className="flex flex-col rounded border p-5 flex-1 min-w-0"
     >
       {/* Preview image */}
       <Link

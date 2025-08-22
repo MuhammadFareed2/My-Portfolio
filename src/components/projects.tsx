@@ -14,23 +14,18 @@ export const Projects = () => {
     <section ref={ref} id="projects" className="my-10 scroll-mt-28 md:mb-20">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-        }}
-        transition={{
-          delay: 0.175,
-        }}
-        viewport={{
-          once: true,
-        }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.175 }}
+        viewport={{ once: true }}
       >
         <SectionHeading
           heading="My Projects"
           content="Projects I worked on. Each of them containing its own case study."
         />
       </motion.div>
-      <div className="flex flex-col gap-7 md:flex-row">
+
+      {/* Flex container for projects */}
+      <div className="flex flex-col gap-7 md:flex-row md:flex-wrap">
         {projectsData.map((project, index) => (
           <Project key={project.title} project={project} index={index} />
         ))}
