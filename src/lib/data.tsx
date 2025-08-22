@@ -25,7 +25,7 @@ export const links = [
 
 export const projectsData = [
   {
-    image: '/images/project1.png',
+    image: '/images/portfolio.png',
     title: 'Personal Portfolio',
     description:
       'A personal portfolio built with React and Next.js to showcase projects, skills, and experience. Features smooth animations, responsive design, and a contact form powered by Resend.',
@@ -43,7 +43,7 @@ export const projectsData = [
     },
   },
   {
-    image: '/images/project2.png',
+    image: '/images/briefai.png',
     title: 'BriefAI',
     description:
       'BriefAI is an AI-powered tool that turns messy briefs into structured ones with clarifying questions and missing info detection. It includes a dashboard, history tracking, and a detailed brief page for easy management.',
