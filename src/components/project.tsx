@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-
 import { Button } from '@/components/button';
 import { Icons } from '@/components/icons';
 import { projectsData } from '@/lib/data';
@@ -13,23 +12,19 @@ type TProject = (typeof projectsData)[number];
 type TProps = {
   project: TProject;
   index: number;
+  className?: string; // ✅ allows passing className
 };
 
 const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
+  initial: { opacity: 0, y: 100 },
   animate: (index: number) => ({
     opacity: 1,
     y: 0,
-    transition: {
-      delay: 0.1 * index,
-    },
+    transition: { delay: 0.1 * index },
   }),
 };
 
-export const Project = ({ project, index }: TProps) => {
+export const Project = ({ project, index, className }: TProps) => {
   const { image, title, description, technologies, links } = project;
 
   return (
@@ -37,11 +32,9 @@ export const Project = ({ project, index }: TProps) => {
       variants={fadeInAnimationVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{
-        once: true,
-      }}
+      viewport={{ once: true }}
       custom={index}
-      className="flex flex-col rounded border p-5 md:w-1/2"
+      className={`flex flex-col rounded border p-5 ${className || ''}`} // ✅ merge className
     >
       {/* Preview image */}
       <Link
@@ -72,7 +65,7 @@ export const Project = ({ project, index }: TProps) => {
         ))}
       </div>
 
-      {/* Links (Preview + GitHub buttons) */}
+      {/* Links (Preview + GitHub) */}
       <div className="flex gap-2 mt-auto">
         {links.preview && (
           <Button asChild size="sm">
