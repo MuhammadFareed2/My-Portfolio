@@ -35,6 +35,7 @@ export const Intro = () => {
           <span className="font-mono text-sm">Available for work!</span>
         </Link>
       </motion.div>
+
       <motion.h1
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -46,6 +47,7 @@ export const Intro = () => {
         </span>{' '}
         developer creating modern web apps.
       </motion.h1>
+
       <motion.p
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -58,42 +60,56 @@ export const Intro = () => {
         building modern web and mobile applications using React, Next.js,
         Node.js, Express, PostgreSQL, and MongoDB.
       </motion.p>
+
+      {/* Buttons & Icons */}
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.1,
         }}
-        className="flex flex-row gap-2"
+        className="flex w-full flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-2"
       >
-        <Button asChild size="lg">
+        {/* Get in touch */}
+        <Button asChild size="lg" className="w-full sm:w-auto">
           <Link href="#contact">
             Get in touch <Icons.arrowRight className="ml-2 size-4" />
           </Link>
         </Button>
-        <Button variant="outline" size="lg" className="hidden sm:flex" asChild>
+
+        {/* Download CV */}
+        <Button
+          variant="outline"
+          size="lg"
+          className="w-full sm:w-auto"
+          asChild
+        >
           <a href="/fareed.pdf" download>
             Download CV <Icons.download className="ml-2 size-4" />
           </a>
         </Button>
-        <Button variant="outline" size="icon" asChild>
-          <Link
-            href="https://www.linkedin.com/in/muhammadfareed2024/"
-            aria-label="Linkedin"
-            target="_blank"
-          >
-            <Icons.linkedin className="size-5" />
-          </Link>
-        </Button>
-        <Button variant="outline" size="icon" asChild>
-          <Link
-            href="https://github.com/MuhammadFareed2"
-            aria-label="Github"
-            target="_blank"
-          >
-            <Icons.github className="size-5" />
-          </Link>
-        </Button>
+
+        {/* Social icons */}
+        <div className="flex gap-2">
+          <Button variant="outline" size="icon" asChild>
+            <Link
+              href="https://www.linkedin.com/in/muhammadfareed2024/"
+              aria-label="Linkedin"
+              target="_blank"
+            >
+              <Icons.linkedin className="size-5" />
+            </Link>
+          </Button>
+          <Button variant="outline" size="icon" asChild>
+            <Link
+              href="https://github.com/MuhammadFareed2"
+              aria-label="Github"
+              target="_blank"
+            >
+              <Icons.github className="size-5" />
+            </Link>
+          </Button>
+        </div>
       </motion.div>
     </section>
   );
