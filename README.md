@@ -1,36 +1,32 @@
-## 🎉 Project Overview
-My personal portfolio website built using Next.js, Tailwind CSS and Framer-motion.
 
-## 📍 Live 
+# 🎨 Muhammad Fareed's Portfolio
 
-Link to the live version: [https://michalskolak.vercel.app](https://michalskolak.vercel.app)
+Welcome to my personal portfolio! This website showcases my journey as a full-stack developer, highlighting my skills, projects, and achievements.
 
-## 💾 Installation 
-Download the project to your computer and install needed packages with command:
+🔗 [Live Demo](https://muhammadfareed.vercel.app)
 
-```bash
-$ npm install
-```
-Then create .env file:
-```bash
-SITE_URL='https://example.com' ## Required to generate sitemap by next-sitemap 
-RESEND_API_KEY='your_resend_api_key' ## Required to send email by resend
-```
+---
 
-Then start the project on the local server with the command:
+## 🚀 Features
 
-```bash
-$ npm run dev
-```
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices.
+- **Interactive Animations**: Smooth transitions powered by Framer Motion.
+- **Project Showcase**: Detailed sections highlighting my key projects and contributions.
 
-and open http://localhost:3000 to see this app.
+---
 
-## 🔧 Tech/framework used 
-- Next.js
-- TypeScript
-- Tailwind CSS
-- Framer-motion
-- React-hook-form
-- Resend
+## 🛠 Tech Stack
 
-If you encounter a problem, write to this e-mail address: [skolakmichal1@gmail.com](mailto:skolakmichal1@gmail.com)
+- **Next.js**: React framework for server-side rendering and static site generation.
+- **TypeScript**: Adds type safety and improved developer experience.
+- **Tailwind CSS**: Utility-first CSS framework for rapid styling.
+- **Framer Motion**: Animation library for smooth, interactive UI.
+
+---
+
+## 📦 Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/MuhammadFareed2/My-Portfolio.git
