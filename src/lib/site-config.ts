@@ -35,5 +35,5 @@ export const siteConfig = {
     'React Native',
   ],
   url: env.SITE_URL || 'https://muhammadfareed.vercel.app/',
-  googleSiteVerificationId: env.GOOGLE_SITE_VERIFICATION_ID || '',
+  googleSiteVerificationId: env.GOOGLE_SITE_VERIFICATION_ID || 'iOOivgmpRfQwpGvZV3XpnCWIF11551axe7trEo4Ns48',
 };
