@@ -34,6 +34,6 @@ export const siteConfig = {
     'Firebase',
     'React Native',
   ],
-  url: env.SITE_URL || 'https://yourdomain.com',
+  url: env.SITE_URL || 'https://muhammadfareed.vercel.app/',
   googleSiteVerificationId: env.GOOGLE_SITE_VERIFICATION_ID || '',
 };
