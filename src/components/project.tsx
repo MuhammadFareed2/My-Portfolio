@@ -39,21 +39,21 @@ export const Project = ({ project, index }: TProps) => {
       whileInView="animate"
       viewport={{ once: true }}
       custom={index}
-      className="flex flex-col rounded border p-5 flex-1 min-w-0"
+      className="flex min-w-0 flex-1 flex-col rounded border p-5"
     >
       {/* Preview image */}
       <Link
         href={links.preview}
         aria-label={title}
         target="_blank"
-        className="overflow-hidden rounded w-full"
+        className="w-full overflow-hidden rounded"
       >
         <Image
           src={image}
           alt={title}
           height={390}
           width={600}
-          className="rounded transition-transform hover:scale-105 w-full h-auto object-cover"
+          className="h-auto w-full rounded object-cover transition-transform hover:scale-105"
         />
       </Link>
 
@@ -62,7 +62,7 @@ export const Project = ({ project, index }: TProps) => {
       <p className="text-muted-foreground mb-2 mt-1">{description}</p>
 
       {/* Tech stack */}
-      <div className="flex flex-wrap gap-2 mb-3">
+      <div className="mb-3 flex flex-wrap gap-2">
         {technologies.map((tech) => (
           <span className="rounded-full border px-3 py-1 text-sm" key={tech}>
             {tech}
@@ -71,7 +71,7 @@ export const Project = ({ project, index }: TProps) => {
       </div>
 
       {/* Links (Preview + GitHub buttons) */}
-      <div className="flex gap-2 mt-auto flex-wrap">
+      <div className="mt-auto flex flex-wrap gap-2">
         {links.preview && (
           <Button asChild size="sm">
             <Link href={links.preview} target="_blank">
