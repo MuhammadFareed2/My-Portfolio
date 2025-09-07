@@ -1,14 +1,14 @@
-import '@/styles/globals.css';
-
 import { PropsWithChildren } from 'react';
 import type { Metadata } from 'next';
+
+import '@/styles/globals.css';
 
 import { ActiveSectionProvider } from '@/components/active-section-provider';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/toaster';
 import { fonts } from '@/lib/fonts';
-import { cn } from '@/lib/utils';
 import { siteConfig } from '@/lib/site-config';
+import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
