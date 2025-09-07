@@ -1,9 +1,9 @@
 import { env } from '@/env.mjs';
 
 export const siteConfig = {
-  title: 'Muhammad Fareed | Full-Stack MERN & AI Developer',
-  description:
-    "Muhammad Fareed is a Full-Stack MERN developer from Pakistan specializing in React, Next.js, Node.js, MongoDB, and AI-powered web applications. Explore portfolio, projects, and expertise in modern web development.",
+  title: 'Muhammad Fareed | Full-Stack Developer',
+   description:
+    'Muhammad Fareed is a Full-Stack MERN developer from Pakistan specializing in React, Next.js, Node.js, MongoDB, and AI-powered web applications. Explore portfolio, projects, and expertise in modern web development.',
   keywords: [
     'Muhammad Fareed',
     'Full-Stack Developer',
