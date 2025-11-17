@@ -10,6 +10,10 @@ export const links = [
     hash: '#about',
   },
   {
+    name: 'Experience',
+    hash: '#experience',
+  },
+  {
     name: 'Education',
     hash: '#education',
   },
@@ -66,6 +70,20 @@ export const projectsData = [
 
 export const educationData = [
   {
+    title: 'Data Science & Artificial Intelligence',
+    company: 'Saylani Mass IT Training',
+    period: 'August 2025 – Present',
+    description:
+      'Learning core concepts of Data Science and AI including Python, Numpy, Pandas, Machine Learning fundamentals, and practical problem-solving with real datasets.',
+    technologies: [
+      'Python',
+      'NumPy',
+      'Pandas',
+      'Data Analysis',
+      'Machine Learning Basics',
+    ],
+  },
+  {
     title: 'Intermediate in Computer Science',
     company: 'The Govt National College, Karachi',
     description:
@@ -105,6 +123,90 @@ export const educationData = [
       'Supabase',
       'MongoDB',
       'PostgreSQL',
+      'React Native',
+    ],
+  },
+] as const;
+
+export const experienceData = [
+  {
+    title: 'Full-Stack Developer',
+    company: 'Freelancer (Remote)',
+    description:
+      'Built and deployed full-stack applications using modern frameworks. Integrated third-party APIs and delivered production-ready features with scalable architecture and CI/CD pipelines.',
+    period: '2024 – Present',
+    technologies: [
+      // Frontend
+      'HTML5',
+      'CSS3',
+      'Tailwind CSS',
+      'JavaScript ES6',
+      'TypeScript',
+      'React',
+      'Next.js',
+      'Angular',
+      'Redux',
+
+      // Backend
+      'Node.js',
+      'Express.js',
+      'REST API',
+
+      // Realtime / Integrations
+      'Socket.IO',
+      'Firebase',
+      'Supabase',
+      'Stripe',
+      'OpenAI',
+
+      // Databases
+      'MongoDB',
+      'PostgreSQL',
+
+      // DevOps (Freelance only)
+      'Docker',
+      'GitHub Actions (CI/CD)',
+
+      // Mobile
+      'React Native',
+    ],
+  },
+  {
+    title: 'Full-Stack Training Projects',
+    company: 'Saylani Mass IT Training (Onsite)',
+    description:
+      'Completed hands-on projects as part of a full-stack development diploma. Built MERN applications with authentication, dashboards, APIs, and collaborative Git/GitHub version control.',
+    period: '2024',
+    technologies: [
+      // Frontend
+      'HTML5',
+      'CSS3',
+      'Tailwind CSS',
+      'JavaScript ES6',
+      'TypeScript',
+      'React',
+      'Next.js',
+      'Angular',
+      'Redux',
+
+      // Backend
+      'Node.js',
+      'Express.js',
+      'REST API',
+
+      // Realtime / Integrations
+      'Socket.IO',
+      'Firebase',
+      'Supabase',
+
+      // Databases
+      'MongoDB',
+      'PostgreSQL',
+
+      // Tools (Not DevOps)
+      'Git/GitHub',
+
+      // Mobile
       'React Native',
     ],
   },
