@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -32,6 +33,13 @@ const fadeInAnimationVariants = {
 export const Project = ({ project, index }: TProps) => {
   const { image, title, description, technologies, links } = project;
 
+  const [expanded, setExpanded] = useState(false);
+
+  const shortDesc =
+    description.length > 150
+      ? description.slice(0, 150) + '...'
+      : description;
+
   return (
     <motion.div
       variants={fadeInAnimationVariants}
@@ -59,7 +67,20 @@ export const Project = ({ project, index }: TProps) => {
 
       {/* Title + description */}
       <h3 className="mt-3 text-xl font-medium">{title}</h3>
-      <p className="text-muted-foreground mb-2 mt-1">{description}</p>
+
+      <p className="text-muted-foreground mb-2 mt-1">
+        {expanded ? description : shortDesc}
+      </p>
+
+      {/* See More / See Less */}
+      {description.length > 150 && (
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className="mb-3 text-sm text-white hover:underline w-fit"
+        >
+          {expanded ? 'See Less...' : 'See More...'}
+        </button>
+      )}
 
       {/* Tech stack */}
       <div className="mb-3 flex flex-wrap gap-2">

@@ -21,15 +21,16 @@ export const About = () => {
       <SectionHeading heading="About Me" />
       <div className="-mt-5 max-w-2xl text-center leading-7">
         <p className="mb-4">
-          I&apos;m Muhammad Fareed, a full-stack developer from Pakistan with a
-          strong passion for building modern, scalable applications. After
-          completing my O-Levels at Zatians, I dedicated myself to mastering web
-          and mobile development. I enjoy turning complex problems into simple,
-          elegant solutions and bringing ideas to life through clean code and
-          thoughtful design. My expertise covers React, Next.js, Angular,
-          Node.js, Express, and databases like PostgreSQL and MongoDB. I also
-          have hands-on experience with Redux, React Native, Firebase, Supabase,
-          and real-time technologies like Socket.IO.
+I&apos;m Muhammad Fareed, a full-stack developer from Pakistan with a
+passion for building modern, scalable applications. I enjoy turning
+complex problems into simple, elegant solutions through clean code
+and thoughtful design. My expertise covers React, Next.js, Angular,
+Node.js, Express, and databases like PostgreSQL and MongoDB. I also
+have hands-on experience with Redux, React Native, Firebase, Supabase,
+and real-time technologies like Socket.IO, while currently exploring
+Data Science and AI.
+
+
         </p>
         <p>
           I&apos;m open to opportunities where I can contribute my skills, grow

@@ -56,9 +56,10 @@ export const Intro = () => {
         }}
         className="text-muted-foreground max-w-xl"
       >
-        A full-stack developer based in Pakistan. I&apos;m passionate about
-        building modern web and mobile applications using React, Next.js,
-        Node.js, Express, PostgreSQL, and MongoDB.
+         A full-stack developer based in Pakistan. I&apos;m passionate about
+  building modern web and mobile applications using React, Next.js,
+  Node.js, Express, PostgreSQL, and MongoDB, and I&apos;m learning
+  Data Science and AI to explore intelligent systems.
       </motion.p>
 
       {/* Buttons & Icons */}

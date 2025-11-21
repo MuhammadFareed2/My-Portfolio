@@ -28,27 +28,51 @@ export const links = [
 ] as const;
 
 export const projectsData = [
-  {
-    image: '/images/portfolio.png',
-    title: 'Personal Portfolio',
-    description:
-      'A personal portfolio built with React and Next.js to showcase projects, skills, and experience. Features smooth animations, responsive design, and a contact form powered by Resend.',
-    technologies: [
-      'Frontend',
-      'Next.js',
-      'TypeScript',
-      'Tailwind CSS',
-      'Framer Motion',
-      'Resend',
-    ],
+     {
+    image: '/images/meeting-companion.png',
+    title: 'Meeting Companion',
+description:
+  'A full meeting automation system that allows users to upload meeting recordings, generate transcripts, and create structured Minutes of Meeting (MoM) using AI. It includes secure authentication, OTP verification, Cloudinary storage, video to audio conversion, AssemblyAI transcription, and DeepSeek powered summaries. The backend is built with a modern MERN and TypeScript stack and is hosted on Railway.',
+technologies: [
+  'Backend',
+  'Node.js',
+  'Express',
+  'TypeScript',
+  'MongoDB',
+  'Cloudinary',
+  'AssemblyAI',
+  'OpenRouter / DeepSeek AI',
+  'JWT Auth',
+  'Multer',
+  'FFmpeg',
+],
+
     links: {
-      preview: 'https://muhammadfareed.vercel.app',
-      github: 'https://github.com/MuhammadFareed2/My-Portfolio',
+      preview: 'https://meeting-companion.vercel.app/',
+      github: 'https://github.com/MuhammadFareed2/Meeting-Companion-Frontend',
     },
   },
+  // {
+  //   image: '/images/portfolio.png',
+  //   title: 'Personal Portfolio',
+  //   description:
+  //     'A personal portfolio built with React and Next.js to showcase projects, skills, and experience. Features smooth animations, responsive design, and a contact form powered by Resend.',
+  //   technologies: [
+  //     'Frontend',
+  //     'Next.js',
+  //     'TypeScript',
+  //     'Tailwind CSS',
+  //     'Framer Motion',
+  //     'Resend',
+  //   ],
+  //   links: {
+  //     preview: 'https://muhammadfareed.vercel.app',
+  //     github: 'https://github.com/MuhammadFareed2/My-Portfolio',
+  //   },
+  // },
   {
     image: '/images/briefai.png',
-    title: 'BriefAI',
+    title: 'Brief AI',
     description:
       'BriefAI is an AI-powered tool that turns messy briefs into structured ones with clarifying questions and missing info detection. It includes a dashboard, history tracking, and a detailed brief page for easy management.',
     technologies: [
