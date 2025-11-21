@@ -1,4 +1,3 @@
-
 # 🎨 Muhammad Fareed's Portfolio
 
 Welcome to my personal portfolio! This website showcases my journey as a full-stack developer, highlighting my skills, projects, and achievements.
@@ -30,3 +29,4 @@ Welcome to my personal portfolio! This website showcases my journey as a full-st
 
    ```bash
    git clone https://github.com/MuhammadFareed2/My-Portfolio.git
+   ```

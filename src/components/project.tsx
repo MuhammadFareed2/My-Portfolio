@@ -36,9 +36,7 @@ export const Project = ({ project, index }: TProps) => {
   const [expanded, setExpanded] = useState(false);
 
   const shortDesc =
-    description.length > 150
-      ? description.slice(0, 150) + '...'
-      : description;
+    description.length > 150 ? description.slice(0, 150) + '...' : description;
 
   return (
     <motion.div

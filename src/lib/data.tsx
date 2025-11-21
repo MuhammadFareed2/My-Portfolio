@@ -28,24 +28,24 @@ export const links = [
 ] as const;
 
 export const projectsData = [
-     {
+  {
     image: '/images/meeting-companion.png',
     title: 'Meeting Companion',
-description:
-  'A full meeting automation system that allows users to upload meeting recordings, generate transcripts, and create structured Minutes of Meeting (MoM) using AI. It includes secure authentication, OTP verification, Cloudinary storage, video to audio conversion, AssemblyAI transcription, and DeepSeek powered summaries. The backend is built with a modern MERN and TypeScript stack and is hosted on Railway.',
-technologies: [
-  'Backend',
-  'Node.js',
-  'Express',
-  'TypeScript',
-  'MongoDB',
-  'Cloudinary',
-  'AssemblyAI',
-  'OpenRouter / DeepSeek AI',
-  'JWT Auth',
-  'Multer',
-  'FFmpeg',
-],
+    description:
+      'A full meeting automation system that allows users to upload meeting recordings, generate transcripts, and create structured Minutes of Meeting (MoM) using AI. It includes secure authentication, OTP verification, Cloudinary storage, video to audio conversion, AssemblyAI transcription, and DeepSeek powered summaries. The backend is built with a modern MERN and TypeScript stack and is hosted on Railway.',
+    technologies: [
+      'Backend',
+      'Node.js',
+      'Express',
+      'TypeScript',
+      'MongoDB',
+      'Cloudinary',
+      'AssemblyAI',
+      'OpenRouter / DeepSeek AI',
+      'JWT Auth',
+      'Multer',
+      'FFmpeg',
+    ],
 
     links: {
       preview: 'https://meeting-companion.vercel.app/',
