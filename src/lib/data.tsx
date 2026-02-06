@@ -14,6 +14,11 @@ export const links = [
     hash: '#experience',
   },
   {
+    name: 'Skills',
+    hash: '#skills',
+  },
+
+  {
     name: 'Education',
     hash: '#education',
   },
@@ -29,59 +34,35 @@ export const links = [
 
 export const projectsData = [
   {
-    image: '/images/meeting-companion.png',
+    image: '/images/meeting-companio.png',
     title: 'Meeting Companion',
     description:
-      'A full meeting automation system that allows users to upload meeting recordings, generate transcripts, and create structured Minutes of Meeting (MoM) using AI. It includes secure authentication, OTP verification, Cloudinary storage, video to audio conversion, AssemblyAI transcription, and DeepSeek powered summaries. The backend is built with a modern MERN and TypeScript stack and is hosted on Railway.',
+      'Full meeting automation platform with transcripts, minutes of meeting, and action items generation. Features real-time audio processing and AI-powered summaries.',
     technologies: [
-      'Backend',
+      'React',
       'Node.js',
-      'Express',
-      'TypeScript',
       'MongoDB',
-      'Cloudinary',
       'AssemblyAI',
-      'OpenRouter / DeepSeek AI',
-      'JWT Auth',
-      'Multer',
-      'FFmpeg',
+      'DeepSeek',
+      'TypeScript',
+      'Cloudinary',
     ],
-
     links: {
       preview: 'https://meeting-companion.vercel.app/',
       github: 'https://github.com/MuhammadFareed2/Meeting-Companion-Frontend',
     },
   },
-  // {
-  //   image: '/images/portfolio.png',
-  //   title: 'Personal Portfolio',
-  //   description:
-  //     'A personal portfolio built with React and Next.js to showcase projects, skills, and experience. Features smooth animations, responsive design, and a contact form powered by Resend.',
-  //   technologies: [
-  //     'Frontend',
-  //     'Next.js',
-  //     'TypeScript',
-  //     'Tailwind CSS',
-  //     'Framer Motion',
-  //     'Resend',
-  //   ],
-  //   links: {
-  //     preview: 'https://muhammadfareed.vercel.app',
-  //     github: 'https://github.com/MuhammadFareed2/My-Portfolio',
-  //   },
-  // },
   {
-    image: '/images/briefai.png',
+    image: '/images/brief-ai.png',
     title: 'Brief AI',
     description:
-      'BriefAI is an AI-powered tool that turns messy briefs into structured ones with clarifying questions and missing info detection. It includes a dashboard, history tracking, and a detailed brief page for easy management.',
+      'AI-powered tool that transforms messy creative briefs into structured, professional documents with intelligent clarifying questions. Includes dashboard and history tracking.',
     technologies: [
-      'JavaScript',
-      'React',
+      'React.js',
       'Node.js',
-      'Express',
+      'Express.js',
       'MongoDB',
-      'AI Integration',
+      'OpenAI API',
       'Tailwind',
       'JWT',
     ],
@@ -90,65 +71,87 @@ export const projectsData = [
       github: 'https://github.com/MuhammadFareed2/Brief-AI',
     },
   },
+  {
+    image: '/images/ai-finance-application.png',
+    title: 'AI Money & Budget App',
+    description:
+      'AI-powered finance app with multi-wallet tracking, smart budgets, and real-time insights. Includes chat-based transaction entry, auto-categorization, and OCR receipt scanning.',
+    technologies: [
+      'React Native',
+      'NativeWind',
+      'Node.js',
+      'MongoDB',
+      'Clerk',
+      'OpenAI',
+      'OCR',
+    ],
+    links: {
+      preview: '',
+      github: '',
+    },
+  },
+  {
+    image: '/images/ai-crm-dashboard.png',
+    title: 'CRM Dashboard',
+    description:
+      'Comprehensive dashboard for tracking leads, customers, and sales metrics. Features real-time updates and interactive visualizations using Recharts.',
+    technologies: [
+      'React',
+      'TypeScript',
+      'LangChain',
+      'LangGraph',
+      'Node.js',
+      'Express',
+      'MongoDB',
+      'Zustand',
+      'Recharts',
+    ],
+    links: {
+      preview: '',
+      github: '',
+    },
+  },
 ] as const;
+
 
 export const educationData = [
   {
     title: 'Data Science & Artificial Intelligence',
     company: 'Saylani Mass IT Training',
-    period: 'August 2025 – Present',
+    period: '2025 – Present',
     description:
-      'Learning core concepts of Data Science and AI including Python, Numpy, Pandas, Machine Learning fundamentals, and practical problem-solving with real datasets.',
-    technologies: [
-      'Python',
-      'NumPy',
-      'Pandas',
-      'Data Analysis',
-      'Machine Learning Basics',
-    ],
+      'Deepening expertise in AI/ML pipelines, handling complex datasets with Pandas/NumPy, and building predictive models. Focusing on practical applications of GenAI and LLMs.',
+    technologies: ['Python', 'NumPy', 'Pandas', 'Scikit-learn', 'GenAI'],
   },
   {
     title: 'Intermediate in Computer Science',
-    company: 'The Govt National College, Karachi',
+    company: 'The Govt National College',
     description:
-      'Currently pursuing Intermediate in Computer Science with a focus on programming fundamentals, problem-solving, and core concepts of software development.',
-    period: 'Aug 2025 – Present',
+      'Building a strong theoretical foundation in computer science, logic building, and mathematics. Active member of the CS society.',
+    period: '2025 – Present',
     technologies: ['Computer Science', 'Mathematics', 'Logic'],
   },
   {
-    title: 'O Level in Computer Science',
-    company: 'The Zatians Academy, Karachi',
+    title: 'Web & App Development Diploma',
+    company: 'Saylani Mass IT Training (SMIT)',
     description:
-      'Completed O Level with a specialization in Computer Science, covering core subjects such as programming basics, data structures, and algorithms.',
-    period: 'Jun 2023 – Jun 2025',
-    technologies: ['Computer Science', 'O Level Curriculum'],
+      'Intensive 1-year bootcamp mastering the MERN stack. Built multiple production-grade applications, learned agile methodologies, and collaborated on team projects.',
+    period: '2024',
+    technologies: [
+      'MERN Stack',
+      'TypeScript',
+      'Next.js',
+      'NativeWind',
+      'PostgreSQL',
+    ],
   },
   {
-    title: 'Web & App Development Diploma',
-    company: 'Saylani Mass IT Training (SMIT), Karachi',
+    title: 'O Level in Computer Science',
+    company: 'The Zatians Academy',
     description:
-      'Successfully completed a one-year diploma focusing on full-stack web and app development, including hands-on training in modern frameworks and technologies.',
-    period: 'Jan 2024 – Dec 2024',
-    technologies: [
-      'HTML5',
-      'CSS3',
-      'Tailwind CSS',
-      'JavaScript ES6',
-      'TypeScript',
-      'React',
-      'Next.js',
-      'Angular',
-      'Redux',
-      'Node.js',
-      'Express.js',
-      'REST API',
-      'Socket.IO',
-      'Firebase',
-      'Supabase',
-      'MongoDB',
-      'PostgreSQL',
-      'React Native',
-    ],
+      'Achieved excellence in core computer science subjects. Developed early passion for coding through basic programming projects.',
+    period: '2023 – 2025',
+    technologies: ['Programming Basics', 'Algorithms'],
   },
 ] as const;
 
@@ -237,16 +240,66 @@ export const experienceData = [
 ] as const;
 
 export const skillsData = [
-  { icon: <Icons.html className="size-12" /> },
-  { icon: <Icons.css className="size-12" /> },
-  { icon: <Icons.tailwind className="size-12" /> },
-  { icon: <Icons.javascript className="size-12" /> },
-  { icon: <Icons.typescript className="size-12" /> },
-  { icon: <Icons.react className="size-12" /> },
-  { icon: <Icons.nextjs className="size-12" /> },
-  { icon: <Icons.angular className="size-12" /> },
-  { icon: <Icons.nodejs className="size-12" /> },
-  { icon: <Icons.express className="size-12" /> },
-  { icon: <Icons.mongodb className="size-12" /> },
-  { icon: <Icons.postgresql className="size-12" /> },
+  {
+    category: 'Frontend',
+    skills: [
+      'React.js',
+      'Next.js',
+      'Redux',
+      'TypeScript',
+      'JavaScript (ES6+)',
+      'Tailwind CSS',
+      'Framer Motion',
+    ],
+  },
+  {
+    category: 'Backend',
+    skills: [
+      'Node.js',
+      'Express.js',
+      'REST APIs',
+      'WebSockets (Socket.io)',
+      'FastAPI',
+      'Python',
+    ],
+  },
+  {
+    category: 'Databases',
+    skills: [
+      'MongoDB',
+      'PostgreSQL',
+      'Firebase (Firestore)',
+    ],
+  },
+  {
+    category: 'AI / LLM Tools',
+    skills: [
+      'OpenAI API',
+      'LangChain',
+      'LangGraph',
+      'Prompt Engineering',
+    ],
+  },
+  {
+    category: 'Automation & Tools',
+    skills: [
+      'n8n',
+      'Cursor',
+      'Antigravity',
+      'Git',
+      'GitHub Actions',
+      'CI/CD',
+      'Docker',
+      'Kubernetes',
+    ],
+  },
+  {
+    category: 'Data Science',
+    skills: [
+      'Pandas',
+      'NumPy',
+      'Matplotlib',
+      'Scikit-learn (basics)',
+    ],
+  },
 ] as const;

@@ -16,8 +16,10 @@ export const Experience = () => {
     <section
       ref={sectionRef}
       id="experience"
-      className="my-10 scroll-mt-28 md:mb-20"
+      className="mb-20 scroll-mt-28 sm:mb-28"
+
     >
+
       <SectionHeading
         heading="My Experience"
         content="Professional journey, roles, and practical experience I’ve gained working on real-world projects."

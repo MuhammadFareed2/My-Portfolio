@@ -4,10 +4,11 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
-import { Button } from '@/components/button';
 import { Icons } from '@/components/icons';
 import { projectsData } from '@/lib/data';
+import { cn } from '@/lib/utils';
 
 type TProject = (typeof projectsData)[number];
 
@@ -19,24 +20,24 @@ type TProps = {
 const fadeInAnimationVariants = {
   initial: {
     opacity: 0,
-    y: 100,
+    y: 50,
   },
   animate: (index: number) => ({
     opacity: 1,
     y: 0,
     transition: {
       delay: 0.1 * index,
+      duration: 0.5,
     },
   }),
 };
 
 export const Project = ({ project, index }: TProps) => {
   const { image, title, description, technologies, links } = project;
-
   const [expanded, setExpanded] = useState(false);
 
-  const shortDesc =
-    description.length > 150 ? description.slice(0, 150) + '...' : description;
+  // Determine if description is long enough to need expansion
+  const isLongDescription = description.length > 120;
 
   return (
     <motion.div
@@ -45,66 +46,89 @@ export const Project = ({ project, index }: TProps) => {
       whileInView="animate"
       viewport={{ once: true }}
       custom={index}
-      className="flex min-w-0 flex-1 flex-col rounded border p-5"
+      whileHover={{ y: -5 }}
+      className="group relative flex flex-col overflow-hidden rounded-xl border bg-card/50 text-card-foreground shadow-sm transition-all hover:shadow-lg hover:border-primary/20"
     >
-      {/* Preview image */}
-      <Link
-        href={links.preview}
-        aria-label={title}
-        target="_blank"
-        className="w-full overflow-hidden rounded"
-      >
+      {/* Image Section with Overlay */}
+      <div className="relative h-48 sm:h-60 overflow-hidden">
         <Image
           src={image}
           alt={title}
-          height={390}
-          width={600}
-          className="h-auto w-full rounded object-cover transition-transform hover:scale-105"
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-110"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-      </Link>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-60" />
 
-      {/* Title + description */}
-      <h3 className="mt-3 text-xl font-medium">{title}</h3>
-
-      <p className="text-muted-foreground mb-2 mt-1">
-        {expanded ? description : shortDesc}
-      </p>
-
-      {/* See More / See Less */}
-      {description.length > 150 && (
-        <button
-          onClick={() => setExpanded(!expanded)}
-          className="mb-3 text-sm text-white hover:underline w-fit"
-        >
-          {expanded ? 'See Less...' : 'See More...'}
-        </button>
-      )}
-
-      {/* Tech stack */}
-      <div className="mb-3 flex flex-wrap gap-2">
-        {technologies.map((tech) => (
-          <span className="rounded-full border px-3 py-1 text-sm" key={tech}>
-            {tech}
-          </span>
-        ))}
+        {/* Hover Buttons Overlay */}
+        <div className="absolute inset-0 flex items-center justify-center gap-4 bg-black/40 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
+          {links.preview && (
+            <Link
+              href={links.preview}
+              target="_blank"
+              className="flex items-center justify-center rounded-full bg-background/90 p-3 text-foreground shadow-lg transition-transform hover:scale-110 hover:text-primary active:scale-95"
+              title="View Live"
+            >
+              <Icons.preview className="size-5" />
+            </Link>
+          )}
+          {links.github && (
+            <Link
+              href={links.github}
+              target="_blank"
+              className="flex items-center justify-center rounded-full bg-background/90 p-3 text-foreground shadow-lg transition-transform hover:scale-110 hover:text-primary active:scale-95"
+              title="View Code"
+            >
+              <Icons.githubOutline className="size-5" />
+            </Link>
+          )}
+        </div>
       </div>
 
-      {/* Links (Preview + GitHub buttons) */}
-      <div className="mt-auto flex flex-wrap gap-2">
-        {links.preview && (
-          <Button asChild size="sm">
-            <Link href={links.preview} target="_blank">
-              Preview <Icons.arrowRight className="ml-2 size-4" />
-            </Link>
-          </Button>
-        )}
-        {links.github && (
-          <Button asChild size="sm" variant="outline">
-            <Link href={links.github} target="_blank">
-              Code <Icons.github className="ml-2 size-4" />
-            </Link>
-          </Button>
-        )}
+      {/* Content Section */}
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
+        <h3 className="text-xl font-bold tracking-tight text-foreground transition-colors group-hover:text-primary">
+          {title}
+        </h3>
+
+        <div className="mt-3 text-sm text-muted-foreground leading-relaxed">
+          <motion.div
+            animate={{ height: expanded ? 'auto' : isLongDescription ? '4.5rem' : 'auto' }}
+            initial={false}
+            className="overflow-hidden"
+          >
+            <p>{description}</p>
+          </motion.div>
+
+          {isLongDescription && (
+            <button
+              onClick={() => setExpanded(!expanded)}
+              className="mt-2 flex items-center gap-1.5 text-xs font-medium text-primary hover:underline focus:outline-none"
+            >
+              {expanded ? (
+                <>
+                  Show Less <ChevronUp className="size-3" />
+                </>
+              ) : (
+                <>
+                  Read More <ChevronDown className="size-3" />
+                </>
+              )}
+            </button>
+          )}
+        </div>
+
+        {/* Tech Stack */}
+        <div className="mt-6 flex flex-wrap gap-2">
+          {technologies.map((tech) => (
+            <span
+              key={tech}
+              className="inline-flex items-center rounded-full border bg-secondary/30 px-2.5 py-0.5 text-xs font-medium text-secondary-foreground transition-colors hover:border-primary/30 hover:bg-primary/5"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
       </div>
     </motion.div>
   );

@@ -11,7 +11,7 @@ export const Projects = () => {
   const { ref } = useSectionInView('Projects');
 
   return (
-    <section ref={ref} id="projects" className="my-10 scroll-mt-28 md:mb-20">
+    <section ref={ref} id="projects" className="mb-20 scroll-mt-28 sm:mb-28">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -25,7 +25,8 @@ export const Projects = () => {
       </motion.div>
 
       {/* Flex container for projects */}
-      <div className="flex flex-col gap-7 md:flex-row md:flex-wrap">
+      {/* Grid container for projects */}
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {projectsData.map((project, index) => (
           <Project key={project.title} project={project} index={index} />
         ))}
