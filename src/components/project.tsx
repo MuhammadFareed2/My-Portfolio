@@ -9,7 +9,6 @@ import Link from 'next/link';
 import { Icons } from '@/components/icons';
 import { projectsData } from '@/lib/data';
 
-
 type TProject = (typeof projectsData)[number];
 
 type TProps = {
