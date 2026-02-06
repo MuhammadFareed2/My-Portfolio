@@ -5,7 +5,6 @@ import { SectionHeading } from './section-heading';
 import { useSectionInView } from '@/hooks/use-section-in-view';
 import { skillsData } from '@/lib/data';
 
-
 export const Skills = () => {
   const { ref: sectionRef } = useSectionInView('Skills'); // Ensure "Skills" is in your types/links if using active-section
 
