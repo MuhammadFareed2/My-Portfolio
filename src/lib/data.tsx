@@ -1,5 +1,3 @@
-import { Icons } from '@/components/icons';
-
 export const links = [
   {
     name: 'Home',
@@ -112,7 +110,6 @@ export const projectsData = [
     },
   },
 ] as const;
-
 
 export const educationData = [
   {
@@ -265,20 +262,11 @@ export const skillsData = [
   },
   {
     category: 'Databases',
-    skills: [
-      'MongoDB',
-      'PostgreSQL',
-      'Firebase (Firestore)',
-    ],
+    skills: ['MongoDB', 'PostgreSQL', 'Firebase (Firestore)'],
   },
   {
     category: 'AI / LLM Tools',
-    skills: [
-      'OpenAI API',
-      'LangChain',
-      'LangGraph',
-      'Prompt Engineering',
-    ],
+    skills: ['OpenAI API', 'LangChain', 'LangGraph', 'Prompt Engineering'],
   },
   {
     category: 'Automation & Tools',
@@ -295,11 +283,6 @@ export const skillsData = [
   },
   {
     category: 'Data Science',
-    skills: [
-      'Pandas',
-      'NumPy',
-      'Matplotlib',
-      'Scikit-learn (basics)',
-    ],
+    skills: ['Pandas', 'NumPy', 'Matplotlib', 'Scikit-learn (basics)'],
   },
 ] as const;

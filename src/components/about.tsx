@@ -19,7 +19,7 @@ export const About = () => {
       transition={{ delay: 0.175 }}
     >
       <SectionHeading heading="About Me" />
-      <div className="mb-20 max-w-[45rem] text-center leading-8 sm:mb-28 scroll-mt-28">
+      <div className="mb-20 max-w-[45rem] scroll-mt-28 text-center leading-8 sm:mb-28">
         <p className="mb-4">
           I&apos;m Muhammad Fareed, a full-stack developer from Pakistan with a
           passion for building modern, scalable applications. I enjoy turning

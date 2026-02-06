@@ -40,7 +40,6 @@ export const Contact = () => {
       ref={ref}
       id="contact"
       className="mb-20 w-full scroll-mt-28 sm:mb-28"
-
       initial={{
         opacity: 0,
       }}

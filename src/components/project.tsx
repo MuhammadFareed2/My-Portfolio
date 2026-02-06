@@ -2,9 +2,9 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ChevronDown, ChevronUp } from 'lucide-react';
 
 import { Icons } from '@/components/icons';
 import { projectsData } from '@/lib/data';
@@ -47,10 +47,10 @@ export const Project = ({ project, index }: TProps) => {
       viewport={{ once: true }}
       custom={index}
       whileHover={{ y: -5 }}
-      className="group relative flex flex-col overflow-hidden rounded-xl border bg-card/50 text-card-foreground shadow-sm transition-all hover:shadow-lg hover:border-primary/20"
+      className="bg-card/50 text-card-foreground hover:border-primary/20 group relative flex flex-col overflow-hidden rounded-xl border shadow-sm transition-all hover:shadow-lg"
     >
       {/* Image Section with Overlay */}
-      <div className="relative h-48 sm:h-60 overflow-hidden">
+      <div className="relative h-48 overflow-hidden sm:h-60">
         <Image
           src={image}
           alt={title}
@@ -66,7 +66,7 @@ export const Project = ({ project, index }: TProps) => {
             <Link
               href={links.preview}
               target="_blank"
-              className="flex items-center justify-center rounded-full bg-background/90 p-3 text-foreground shadow-lg transition-transform hover:scale-110 hover:text-primary active:scale-95"
+              className="bg-background/90 text-foreground hover:text-primary flex items-center justify-center rounded-full p-3 shadow-lg transition-transform hover:scale-110 active:scale-95"
               title="View Live"
             >
               <Icons.preview className="size-5" />
@@ -76,7 +76,7 @@ export const Project = ({ project, index }: TProps) => {
             <Link
               href={links.github}
               target="_blank"
-              className="flex items-center justify-center rounded-full bg-background/90 p-3 text-foreground shadow-lg transition-transform hover:scale-110 hover:text-primary active:scale-95"
+              className="bg-background/90 text-foreground hover:text-primary flex items-center justify-center rounded-full p-3 shadow-lg transition-transform hover:scale-110 active:scale-95"
               title="View Code"
             >
               <Icons.githubOutline className="size-5" />
@@ -87,13 +87,15 @@ export const Project = ({ project, index }: TProps) => {
 
       {/* Content Section */}
       <div className="flex flex-1 flex-col p-5 sm:p-6">
-        <h3 className="text-xl font-bold tracking-tight text-foreground transition-colors group-hover:text-primary">
+        <h3 className="text-foreground group-hover:text-primary text-xl font-bold tracking-tight transition-colors">
           {title}
         </h3>
 
-        <div className="mt-3 text-sm text-muted-foreground leading-relaxed">
+        <div className="text-muted-foreground mt-3 text-sm leading-relaxed">
           <motion.div
-            animate={{ height: expanded ? 'auto' : isLongDescription ? '4.5rem' : 'auto' }}
+            animate={{
+              height: expanded ? 'auto' : isLongDescription ? '4.5rem' : 'auto',
+            }}
             initial={false}
             className="overflow-hidden"
           >
@@ -103,7 +105,7 @@ export const Project = ({ project, index }: TProps) => {
           {isLongDescription && (
             <button
               onClick={() => setExpanded(!expanded)}
-              className="mt-2 flex items-center gap-1.5 text-xs font-medium text-primary hover:underline focus:outline-none"
+              className="text-primary mt-2 flex items-center gap-1.5 text-xs font-medium hover:underline focus:outline-none"
             >
               {expanded ? (
                 <>
@@ -123,7 +125,7 @@ export const Project = ({ project, index }: TProps) => {
           {technologies.map((tech) => (
             <span
               key={tech}
-              className="inline-flex items-center rounded-full border bg-secondary/30 px-2.5 py-0.5 text-xs font-medium text-secondary-foreground transition-colors hover:border-primary/30 hover:bg-primary/5"
+              className="bg-secondary/30 text-secondary-foreground hover:border-primary/30 hover:bg-primary/5 inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium transition-colors"
             >
               {tech}
             </span>
