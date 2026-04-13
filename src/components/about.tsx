@@ -37,7 +37,6 @@ export const About = () => {
           to reach out.
         </p>
       </div>
-      <Skills />
     </motion.section>
   );
 };

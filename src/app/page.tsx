@@ -7,6 +7,7 @@ import { Header } from '@/components/header';
 import { Intro } from '@/components/intro';
 import { Projects } from '@/components/projects';
 import { SectionDivider } from '@/components/section-divider';
+import { Skills } from '@/components/skills';
 import { ThemeToggle } from '@/components/theme-toggle';
 
 const HomePage = async () => {
@@ -17,6 +18,7 @@ const HomePage = async () => {
         <Intro />
         <SectionDivider />
         <About />
+        <Skills />
         <Experience />
         <Education />
         <Projects />

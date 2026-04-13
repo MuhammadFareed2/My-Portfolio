@@ -8,14 +8,13 @@ export const links = [
     hash: '#about',
   },
   {
-    name: 'Experience',
-    hash: '#experience',
-  },
-  {
     name: 'Skills',
     hash: '#skills',
   },
-
+  {
+    name: 'Experience',
+    hash: '#experience',
+  },
   {
     name: 'Education',
     hash: '#education',
@@ -32,56 +31,27 @@ export const links = [
 
 export const projectsData = [
   {
-    image: '/images/meeting-companio.png',
-    title: 'Meeting Companion',
+    slug: 'ai-crm-dashboard',
+    image: '/images/AI-CRM-Chatbot.png',
+    title: 'AI CRM Dashboard - Automated Chatbot',
     description:
-      'Full meeting automation platform with transcripts, minutes of meeting, and action items generation. Features real-time audio processing and AI-powered summaries.',
-    technologies: [
-      'React',
-      'Node.js',
-      'MongoDB',
-      'AssemblyAI',
-      'DeepSeek',
-      'TypeScript',
-      'Cloudinary',
+      'Multi-platform AI chatbot for fintech CRM with voice integration. Integrated with WhatsApp, Facebook, SMS, and Web.',
+    fullDescription:
+      'A high-concurrency, multi-platform AI chatbot system designed for Fintech CRM. It leverages RAG (Retrieval-Augmented Generation) and vector search to provide accurate, real-time answers to customer queries. The system handles voice and text across multiple channels including WhatsApp, Facebook, SMS, and Web, significantly reducing manual support workload while improving customer experience.',
+    features: [
+      'Multi-platform integration (WhatsApp, FB, SMS, Web)',
+      'AI Chatbot using RAG and Vector Search',
+      'Voice and Text support',
+      'Real-time high-concurrency handling',
+      'Pinecone Vector DB for intelligent context retrieval',
     ],
-    links: {
-      preview: 'https://meeting-companion.vercel.app/',
-      github: 'https://github.com/MuhammadFareed2/Meeting-Companion-Frontend',
-    },
-  },
-  {
-    image: '/images/brief-ai.png',
-    title: 'Brief AI',
-    description:
-      'AI-powered tool that transforms messy creative briefs into structured, professional documents with intelligent clarifying questions. Includes dashboard and history tracking.',
     technologies: [
-      'React.js',
-      'Node.js',
-      'Express.js',
-      'MongoDB',
+      'MERN Stack',
       'OpenAI API',
-      'Tailwind',
-      'JWT',
-    ],
-    links: {
-      preview: 'https://brief-ai-frontend.vercel.app/',
-      github: 'https://github.com/MuhammadFareed2/Brief-AI',
-    },
-  },
-  {
-    image: '/images/ai-finance-application.png',
-    title: 'AI Money & Budget App',
-    description:
-      'AI-powered finance app with multi-wallet tracking, smart budgets, and real-time insights. Includes chat-based transaction entry, auto-categorization, and OCR receipt scanning.',
-    technologies: [
-      'React Native',
-      'NativeWind',
-      'Node.js',
-      'MongoDB',
-      'Clerk',
-      'OpenAI',
-      'OCR',
+      'LangChain',
+      'LangGraph',
+      'Pinecone',
+      'TypeScript',
     ],
     links: {
       preview: '',
@@ -89,23 +59,86 @@ export const projectsData = [
     },
   },
   {
-    image: '/images/ai-crm-dashboard.png',
-    title: 'CRM Dashboard',
+    slug: 'repurn-fitness',
+    image: '/images/Repurn-Ai.png',
+    title: 'Repurn — Ai Fitness App',
     description:
-      'Comprehensive dashboard for tracking leads, customers, and sales metrics. Features real-time updates and interactive visualizations using Recharts.',
+      'A habit-first fitness app removing excuses with AI scoring and computer vision rep counting.',
+    fullDescription:
+      'Repurn is a revolutionary fitness application that prioritizes consistency over intensity. It uses a custom "Rep Engine" scoring algorithm to select a single, perfectly calibrated exercise for the user each day. The app features on-device computer vision for automatic rep counting and provides AI-powered behavioral insights to help users maintain their streaks.',
+    features: [
+      'Rep Engine: Custom exercise selection algorithm',
+      'Computer Vision: On-device pose detection for rep counting',
+      'AI-Powered Insights: Behavioral pattern analysis',
+      'Streak & Rank System: Gamified progression',
+      'Smart Notifications: Learned delivery timing',
+    ],
     technologies: [
-      'React',
-      'TypeScript',
-      'LangChain',
-      'LangGraph',
+      'React Native',
+      'NativeWind',
+      'Pose Detection (MLKit)',
       'Node.js',
-      'Express',
       'MongoDB',
-      'Zustand',
-      'Recharts',
+      'Framer Motion',
     ],
     links: {
       preview: '',
+      github: '',
+    },
+  },
+  {
+    slug: 'taxi-messages',
+    image: '/images/texi-messages.png',
+    title: 'Taxi Messages (Driver Messaging Web App)',
+    description:
+      'AI SaaS used by 80+ taxi operators, handling 150K+ messages daily with automated WhatsApp booking.',
+    fullDescription:
+      'A powerful AI-driven SaaS platform that automates communication between taxi operators and customers. Handling over 150,000 messages daily, the system uses an intelligent WhatsApp chatbot to automate bookings and provide instant replies. It is built for extreme scalability and high concurrency, serving as a critical tool for dozens of businesses.',
+    features: [
+      'AI-driven WhatsApp chat automation',
+      'Real-time automated taxi booking',
+      'Scalable backend for high message volume',
+      'Multi-operator dashboard',
+      'Instant reply system with contextual awareness',
+    ],
+    technologies: [
+      'MERN Stack',
+      'OpenAI API',
+      'Node.js',
+      'React',
+      'MongoDB',
+      'Socket.io',
+    ],
+    links: {
+      preview: '',
+      github: '',
+    },
+  },
+  {
+    slug: 'ai-meeting-assistant',
+    image: '/images/Meeting-Assistant.png',
+    title: 'AI Powered Meeting Assistant',
+    description:
+      'Meeting management platform with recording uploads, accurate transcripts, and automated MoM generation.',
+    fullDescription:
+      'Meeting Companion is an end-to-end AI management platform for corporate meetings. Users can upload recordings, which are then processed into high-accuracy transcripts. The system automatically structures these into Minutes of Meeting (MoM) with action items and summaries. It features secure OTP-based authentication and a professional workflow for meeting documentation.',
+    features: [
+      'Seamless meeting recording uploads',
+      'Automated high-accuracy transcription',
+      'AI-generated structured Minutes of Meeting (MoM)',
+      'Video-to-audio conversion pipeline',
+      'Secure OTP-based authentication system',
+    ],
+    technologies: [
+      'MERN Stack',
+      'TypeScript',
+      'AssemblyAI',
+      'DeepSeek',
+      'OpenRouter',
+      'Railway (CI/CD)',
+    ],
+    links: {
+      preview: 'https://meeting-companion.railway.app/',
       github: '',
     },
   },
