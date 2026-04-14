@@ -116,11 +116,12 @@ export const Project = ({ project, index }: TProps) => {
             {technologies.slice(0, 5).map((tech) => (
               <span
                 key={tech}
-                className="bg-secondary/50 text-secondary-foreground border-transparent inline-flex items-center rounded-md border px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider transition-colors"
+                className="rounded-full border px-3 py-1 text-[10px] font-medium transition-colors sm:text-sm"
               >
                 {tech}
               </span>
             ))}
+
             {technologies.length > 5 && (
               <span className="text-muted-foreground text-[10px] font-medium">
                 +{technologies.length - 5} more

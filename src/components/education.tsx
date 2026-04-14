@@ -80,7 +80,7 @@ export const Education = () => {
                         {item.technologies.map((tech) => (
                           <span
                             key={tech}
-                            className="bg-secondary/50 text-secondary-foreground rounded-md px-2 py-1 text-[10px] uppercase tracking-wider"
+                            className="rounded-full border px-3 py-1 text-sm"
                           >
                             {tech}
                           </span>

@@ -45,7 +45,7 @@ export const Intro = () => {
         <span className="bg-gradient-to-r from-rose-700 to-pink-600 bg-clip-text text-transparent">
           Full Stack
         </span>{' '}
-        developer creating modern web apps.
+        AI Engineer building scalable intelligent products.
       </motion.h1>
 
       <motion.p
@@ -56,10 +56,10 @@ export const Intro = () => {
         }}
         className="text-muted-foreground max-w-xl"
       >
-        A full-stack developer based in Pakistan. I&apos;m passionate about
-        building modern web and mobile applications using React, Next.js,
-        Node.js, Express, PostgreSQL, and MongoDB, and I&apos;m learning Data
-        Science and AI to explore intelligent systems.
+        Full-Stack and AI Engineer with 2+ years building AI apps and MVPs. I
+        use Next.js, Node.js, PostgreSQL, MongoDB, and integrate LLMs,
+        LangChain, and n8n to deliver real, automated products—not prototypes. I
+        communicate clearly and value deadlines.
       </motion.p>
 
       {/* Buttons & Icons */}

@@ -188,7 +188,7 @@ export const educationData = [
 export const experienceData = [
   {
     title: 'Full-Stack Developer',
-    company: 'Freelancer (Remote)',
+    company: 'Upwork (Freelance)',
     description:
       'Built and deployed full-stack applications using modern frameworks. Integrated third-party APIs and delivered production-ready features with scalable architecture and CI/CD pipelines.',
     period: '2024 – Present',
@@ -275,6 +275,7 @@ export const skillsData = [
     skills: [
       'React.js',
       'Next.js',
+      'React Native',
       'Redux',
       'TypeScript',
       'JavaScript (ES6+)',
@@ -295,27 +296,37 @@ export const skillsData = [
   },
   {
     category: 'Databases',
-    skills: ['MongoDB', 'PostgreSQL', 'Firebase (Firestore)'],
+    skills: ['MongoDB', 'PostgreSQL', 'Firebase (Firestore)', 'Supabase'],
   },
   {
-    category: 'AI / LLM Tools',
-    skills: ['OpenAI API', 'LangChain', 'LangGraph', 'Prompt Engineering'],
-  },
-  {
-    category: 'Automation & Tools',
+    category: 'AI & Automation',
     skills: [
+      'OpenAI API',
+      'LangChain',
+      'LangGraph',
       'n8n',
-      'Cursor',
-      'Antigravity',
-      'Git',
-      'GitHub Actions',
-      'CI/CD',
-      'Docker',
-      'Kubernetes',
+      'Prompt Engineering',
+      'Chatbot Development',
+      'Automation Workflows',
     ],
   },
   {
     category: 'Data Science',
-    skills: ['Pandas', 'NumPy', 'Matplotlib', 'Scikit-learn (basics)'],
+    skills: [
+      'Python',
+      'Pandas',
+      'NumPy',
+      'Matplotlib',
+      'Seaborn',
+      'Scikit-learn (basics)',
+      'Data Cleaning',
+      'Statistics',
+    ],
+  },
+  {
+    category: 'DevOps',
+    skills: ['Git', 'GitHub', 'GitHub Actions', 'Docker', 'CI/CD'],
   },
 ] as const;
+
+
